@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rod &amp; Margielyn · November 14, 2026</title>
+  <meta name="description" content="Rod and Margielyn are getting married at Lisland Rainforest Resort, Urdaneta City — November 14, 2026. RSVP here." />
+
+  <!-- Fonts: Cormorant Garamond (display), Pinyon Script (couple's names), Jost (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand">R &amp; M</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#story">Our Day</a>
+      <a href="#details">Details</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#rsvp" class="nav__cta">RSVP</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <!-- animated "water" layers form the signature backdrop -->
+    <div class="hero__water" aria-hidden="true">
+      <span class="wave wave--1"></span>
+      <span class="wave wave--2"></span>
+      <span class="wave wave--3"></span>
+      <span class="shimmer"></span>
+    </div>
+
+    <div class="hero__inner">
+      <p class="hero__eyebrow reveal">Together with their families</p>
+      <h1 class="hero__names reveal">
+        <span>Rod</span>
+        <span class="hero__amp">&amp;</span>
+        <span>Margielyn</span>
+      </h1>
+      <p class="hero__tag reveal">are getting married</p>
+
+      <div class="hero__meta reveal">
+        <span>Saturday</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>November 14, 2026</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>Urdaneta City</span>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown reveal" id="countdown" aria-live="polite">
+        <div class="countdown__unit"><span class="countdown__num" data-unit="days">--</span><span class="countdown__label">Days</span></div>
+        <div class="countdown__unit"><span class="countdown__num" data-unit="hours">--</span><span class="countdown__label">Hours</span></div>
+        <div class="countdown__unit"><span class="countdown__num" data-unit="minutes">--</span><span class="countdown__label">Minutes</span></div>
+        <div class="countdown__unit"><span class="countdown__num" data-unit="seconds">--</span><span class="countdown__label">Seconds</span></div>
+      </div>
+
+      <a href="#rsvp" class="btn btn--gold reveal">Reserve your seat</a>
+    </div>
+
+    <a href="#story" class="hero__scroll" aria-label="Scroll to content"><span></span></a>
+  </section>
+
+  <!-- ============ STORY / INTRO ============ -->
+  <section class="section story" id="story">
+    <div class="container container--narrow center">
+      <p class="eyebrow reveal">A resort celebration</p>
+      <h2 class="reveal">Come celebrate with us<br />under the rainforest sky</h2>
+      <p class="lead reveal">
+        After all the years, all the ordinary days made extraordinary by each other,
+        Rod and Margielyn are saying "I do." Join us for an afternoon of vows, a evening of
+        candlelight and dancing, and a lifetime of gratitude that you were there.
+      </p>
+      <!-- Replace this placeholder with a favourite photo of the couple. See PHOTO-GUIDE. -->
+      <figure class="story__photo reveal">
+        <div class="photo-placeholder" data-slot="couple">
+          <span>Your favourite photo of Rod &amp; Margielyn goes here</span>
+          <small>1200 × 800px · replace <code>assets/couple.jpg</code></small>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ DETAILS ============ -->
+  <section class="section details" id="details">
+    <div class="container">
+      <div class="center">
+        <p class="eyebrow reveal">The details</p>
+        <h2 class="reveal">Where &amp; when</h2>
+      </div>
+
+      <div class="details__grid">
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">&#9962;</span>
+          <h3>The Ceremony &amp; Reception</h3>
+          <p class="card__place">Urduja Pavilion</p>
+          <p>Lisland Rainforest Resort<br />
+             KM 182 McArthur Highway, Brgy. San Vicente<br />
+             Urdaneta City, Pangasinan 2428</p>
+          <p class="card__time">Ceremony 10:00 AM &middot; Reception to follow</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">&#9752;</span>
+          <h3>Dress Code</h3>
+          <p class="card__place">Garden Formal</p>
+          <p>We would be honoured to see you in our palette —
+             shades of <strong>baby blue</strong>, soft whites, and warm neutrals.</p>
+          <p class="card__note">Kindly reserve pure white for the bride.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">&#9971;</span>
+          <h3>Getting There &amp; Staying</h3>
+          <p>Along MacArthur Highway, 150m from the Dagupan junction.
+             About 4 hours from Manila via TPLEX/NLEX.</p>
+          <p>Rooms are available on-site at the resort — book early and
+             mention the <strong>Rod &amp; Margielyn wedding</strong>.</p>
+        </article>
+      </div>
+
+      <!-- Map -->
+      <div class="map reveal">
+        <iframe
+          title="Map to Lisland Rainforest Resort"
+          src="https://www.google.com/maps?q=Lisland%20Rainforest%20Resort%2C%20McArthur%20Highway%2C%20San%20Vicente%2C%20Urdaneta%20City%2C%20Pangasinan&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+      <p class="center map__link reveal">
+        <a href="https://www.google.com/maps/search/?api=1&query=Lisland+Rainforest+Resort+Urdaneta+City" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ SCHEDULE ============ -->
+  <section class="section schedule" id="schedule">
+    <div class="container container--narrow">
+      <div class="center">
+        <p class="eyebrow reveal">November 14, 2026</p>
+        <h2 class="reveal">The day, hour by hour</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <span class="timeline__time">9:30 AM</span>
+          <div class="timeline__body">
+            <h3>Guests Arrive</h3>
+            <p>Find your seat in the garden. Welcome drinks await.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__time">10:00 AM</span>
+          <div class="timeline__body">
+            <h3>The Ceremony</h3>
+            <p>Rod &amp; Margielyn exchange their vows.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__time">11:00 AM</span>
+          <div class="timeline__body">
+            <h3>Cocktails &amp; Photos</h3>
+            <p>Portraits by the lagoon while canapés and drinks are served.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__time">12:00 NN</span>
+          <div class="timeline__body">
+            <h3>Reception Luncheon</h3>
+            <p>Toasts, a feast at Bai Marin, and the first dance.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__time">2:00 PM</span>
+          <div class="timeline__body">
+            <h3>Celebration Continues</h3>
+            <p>Music, dancing, and an afternoon of celebration by the pool.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section class="section rsvp" id="rsvp">
+    <div class="container container--narrow">
+      <div class="center">
+        <p class="eyebrow reveal">Kindly respond</p>
+        <h2 class="reveal">RSVP</h2>
+        <p class="lead reveal">Please let us know by <strong>October 14, 2026</strong>
+           so we can save your seat.</p>
+      </div>
+
+      <form class="rsvp__form reveal" id="rsvpForm" novalidate>
+        <div class="field">
+          <label for="guestName">Guest name(s) <span aria-hidden="true">*</span></label>
+          <input type="text" id="guestName" name="guestName" autocomplete="name"
+                 placeholder="e.g. Juan &amp; Maria Dela Cruz" required />
+          <p class="field__error" data-error-for="guestName"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email"
+                 placeholder="you@example.com" required />
+          <p class="field__error" data-error-for="email"></p>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="attendance">Will you attend? <span aria-hidden="true">*</span></label>
+            <select id="attendance" name="attendance" required>
+              <option value="" disabled selected>Choose one…</option>
+              <option value="Joyfully Accepts">Joyfully accepts</option>
+              <option value="Regretfully Declines">Regretfully declines</option>
+            </select>
+            <p class="field__error" data-error-for="attendance"></p>
+          </div>
+
+          <div class="field" id="guestsField">
+            <label for="attendees">Number of attendees <span aria-hidden="true">*</span></label>
+            <input type="number" id="attendees" name="attendees" min="1" max="10"
+                   step="1" inputmode="numeric" placeholder="1" />
+            <p class="field__error" data-error-for="attendees"></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Dietary restrictions or a note for the couple</label>
+          <textarea id="notes" name="notes" rows="4"
+                    placeholder="Allergies, song requests, or a message of love…"></textarea>
+        </div>
+
+        <!-- honeypot: hidden from humans, catches bots -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+               class="hp" aria-hidden="true" />
+
+        <button type="submit" class="btn btn--gold btn--block" id="submitBtn">
+          Send our RSVP
+        </button>
+
+        <p class="rsvp__status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <p class="footer__names">Rod <span>&amp;</span> Margielyn</p>
+    <p class="footer__date">14 &middot; 11 &middot; 2026 — Lisland Rainforest Resort, Urdaneta City</p>
+    <p class="footer__love">Made with love, and a little bit of blue.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
