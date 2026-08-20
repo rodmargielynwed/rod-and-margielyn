@@ -943,3 +943,13 @@ Rsvp upgrade · CSS
     100% { background-size:106%; }
   }
 }
+/* Small note under the schedule heading */
+.schedule__note{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-size:1.05rem;
+  color:var(--gold-deep);
+  max-width:34ch;
+  margin:.6rem auto 0;
+  line-height:1.5;
+}
