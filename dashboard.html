@@ -82,12 +82,15 @@
     .refresh{cursor:pointer;color:var(--gold-deep);font-size:.82rem;text-decoration:none;letter-spacing:.05em}
     .foot{text-align:center;margin-top:1.4rem;font-size:.78rem;color:var(--blue-400)}
     .foot a{cursor:pointer}
-    @media (max-width:560px){
-      /* On phones, hide email column to keep it readable */
+      @media (max-width:560px){
       .col-email{display:none}
       .dash__names{font-size:2.2rem}
+      table{font-size:.82rem}
+      th,td{padding:.55rem .5rem}
+      .allot-input{width:52px;padding:.35rem .3rem}
+      .tablewrap{overflow-x:auto}       /* lets you swipe sideways if needed */
     }
-      /* Allotment editable box */
+          /* Allotment editable box */
     .allot-input{ width:64px; padding:.45rem .5rem; font-size:.95rem; text-align:center;
       border:1.5px solid var(--blue-200); border-radius:8px; background:var(--blue-50);
       color:var(--ink); font-family:var(--font-body); }
