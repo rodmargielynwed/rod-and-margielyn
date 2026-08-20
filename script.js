@@ -12,10 +12,10 @@
        "gscript"    → paste your Google Apps Script /exec URL below
        "demo"       → no backend; logs to console (for local testing)
      ======================================================= */
-  var RSVP = {
-    mode: "demo",
-    formspreeEndpoint: "https://formspree.io/f/XXXXXXXX",           // ← replace XXXXXXXX
-    gscriptEndpoint:  "https://script.google.com/macros/s/XXXX/exec" // ← replace with your /exec URL
+   var RSVP = {
+    mode: "gscript",
+    formspreeEndpoint: "https://formspree.io/f/XXXXXXXX",
+    gscriptEndpoint:  "https://script.google.com/macros/s/AKfycbwfu2KVJLzcZcZa3IJs7At3_P9hcy_CIXdCEIeIGKA2PJCC1PL6em_MOe4quDbV2tvZww/exec"
   };
 
   /* =======================================================
