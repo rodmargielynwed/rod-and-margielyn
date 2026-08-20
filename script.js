@@ -98,7 +98,8 @@
     attendeesInput.required = coming;
     attendeesInput.disabled = !coming;
     guestsField.style.opacity = coming ? "1" : ".5";
-    if (!coming) { attendeesInput.value = ""; clearError(attendeesInput); }
+   if (!coming) { attendeesInput.value = "1"; clearError(attendeesInput); }
+      else if (!attendeesInput.value) { attendeesInput.value = "1"; }
   }
   attendanceSel.addEventListener("change", syncAttendees);
   syncAttendees();
