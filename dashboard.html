@@ -117,7 +117,8 @@
     </div>
  
     <div class="stats">
-      <div class="stat stat--accept"><div class="stat__num" id="sAttending">–</div><div class="stat__label">Guests Attending</div></div>
+      <div class="stat stat--accept"><div class="stat__num" id="sAttending">–</div><div class="stat__label">of 200 Seats Filled</div></div>
+      <div class="stat"><div class="stat__num" id="sAllotted">–</div><div class="stat__label">of 200 Seats Allotted</div></div>
       <div class="stat"><div class="stat__num" id="sParties">–</div><div class="stat__label">Responses (Yes)</div></div>
       <div class="stat stat--decline"><div class="stat__num" id="sDeclined">–</div><div class="stat__label">Declined</div></div>
       <div class="stat"><div class="stat__num" id="sTotal">–</div><div class="stat__label">Total Replies</div></div>
@@ -258,7 +259,21 @@
         if(isYes(r.attendance)){ yesParties++; attendingGuests += (parseInt(r.attendees,10)||0); }
         else { declined++; }
       });
-      document.getElementById("sAttending").textContent = attendingGuests;
+      var attEl = document.getElementById("sAttending");
+      attEl.textContent = attendingGuests + " / 200";
+      if (attendingGuests >= 200)      attEl.style.color = "#c0574f";
+      else if (attendingGuests >= 180) attEl.style.color = "#c9a24b";
+      else                             attEl.style.color = "#3f8f6b";
+      // total of all allotted numbers, against 200
+      var allottedTotal = 0;
+      allRows.forEach(function(r){ allottedTotal += (parseInt(r.allotted,10)||0); });
+      var alEl = document.getElementById("sAllotted");
+      if (alEl){
+        alEl.textContent = allottedTotal + " / 200";
+        if (allottedTotal >= 200)      alEl.style.color = "#c0574f";
+        else if (allottedTotal >= 180) alEl.style.color = "#c9a24b";
+        else                           alEl.style.color = "#3f8f6b";
+      }
       document.getElementById("sParties").textContent = yesParties;
       document.getElementById("sDeclined").textContent = declined;
       document.getElementById("sTotal").textContent = allRows.length;
