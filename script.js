@@ -127,8 +127,7 @@
     if (!name.value.trim()) { setError(name, "Please tell us who's replying."); ok = false; }
     else clearError(name);
 
-    if (!email.value.trim()) { setError(email, "We need an email to confirm."); ok = false; }
-    else if (!EMAIL_RE.test(email.value.trim())) { setError(email, "That email doesn't look right."); ok = false; }
+       if (email.value.trim() && !EMAIL_RE.test(email.value.trim())) { setError(email, "That email doesn't look right."); ok = false; }
     else clearError(email);
 
     if (!attendanceSel.value) { setError(attendanceSel, "Let us know if you can make it."); ok = false; }
