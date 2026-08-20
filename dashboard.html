@@ -233,7 +233,12 @@
         if(isYes(r.attendance)){ yesParties++; attendingGuests += (parseInt(r.attendees,10)||0); }
         else { declined++; }
       });
-      document.getElementById("sAttending").textContent = attendingGuests;
+            var attEl = document.getElementById("sAttending");
+      attEl.textContent = attendingGuests + " / 200";
+      // color warning: green under 180, amber 180–199, red at 200+
+      if (attendingGuests >= 200)      attEl.style.color = "#c0574f";   // over/at cap — red
+      else if (attendingGuests >= 180) attEl.style.color = "#c9a24b";   // getting close — gold
+      else                             attEl.style.color = "#3f8f6b";   // plenty of room — greensn
       document.getElementById("sParties").textContent = yesParties;
       document.getElementById("sDeclined").textContent = declined;
       document.getElementById("sTotal").textContent = allRows.length;
