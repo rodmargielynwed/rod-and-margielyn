@@ -405,6 +405,7 @@ h3 { font-size: 1.4rem; color: var(--blue-600); }
 
 Rsvp upgrade · CSS
 /* =========================================================
+/* =========================================================
    RSVP FORM — CLARITY & WARMTH UPGRADE
    Paste this ENTIRE block at the very END of styles.css.
    It overrides the older, paler form styles above it.
@@ -522,3 +523,170 @@ Rsvp upgrade · CSS
 /* Slightly more breathing room between fields */
 .field{ margin-bottom:1.6rem; }
  
+ 
+/* =========================================================
+   HERO — CONTRAST POLISH (append with the block above)
+   Fixes the faint "together with their families" eyebrow and
+   the pale countdown labels so nothing disappears on blue.
+   ========================================================= */
+ 
+/* Eyebrow: brighter, warmer gold + subtle shadow so it reads */
+.hero__eyebrow{
+  color:#f4e2b0;                         /* brighter gold */
+  opacity:1;
+  letter-spacing:.3em;                   /* slightly tighter = more legible */
+  text-shadow:0 1px 8px rgba(40,60,80,.35);
+}
+ 
+/* Date / city line: pure white for crisp contrast */
+.hero__meta{
+  color:#ffffff;
+  text-shadow:0 1px 10px rgba(40,60,80,.30);
+}
+ 
+/* Countdown numbers already white; make labels clearer */
+.countdown__label{
+  color:#f4e2b0;
+  opacity:1;
+}
+ 
+/* Give the whole hero a touch more depth so white text pops */
+.hero{
+  background:
+    radial-gradient(120% 90% at 50% -10%, rgba(255,255,255,.30), transparent 55%),
+    linear-gradient(180deg,#9cbfdd 0%, #7ba6cf 45%, #5c86b0 100%);
+}
+ 
+   ========================================================= */
+ 
+/* Deeper, warmer ink so text reads clearly for everyone */
+:root{
+  --ink-strong:#2b3d4d;      /* stronger body text */
+  --label-ink:#2f5f86;       /* clearer label blue */
+  --placeholder:#8aa6bd;     /* visible, not ghostly */
+}
+ 
+/* Section intro: make the deadline line larger and clearer */
+.rsvp .lead{
+  color:var(--ink-strong);
+  font-size:1.22rem;
+}
+ 
+/* The form card: a touch more presence */
+.rsvp__form{
+  border-top:5px solid var(--gold);
+  box-shadow:0 24px 60px -28px rgba(51,71,90,.45);
+}
+ 
+/* LABELS — bigger, mixed-case, friendlier and easier to read */
+.field label{
+  font-family:var(--font-body);
+  text-transform:none;         /* no more shouty all-caps */
+  letter-spacing:.01em;
+  font-size:1.02rem;
+  font-weight:500;
+  color:var(--label-ink);
+  margin-bottom:.55rem;
+}
+/* required asterisk -> a soft, clear "Required" cue instead of a bare * */
+.field label span[aria-hidden="true"]{
+  color:var(--gold-deep);
+  font-weight:600;
+}
+.field__opt{                    /* the "(optional)" tag */
+  color:var(--gold-deep);
+  font-weight:400;
+  font-size:.9rem;
+}
+ 
+/* INPUTS — bigger text, stronger border, whiter background = legible */
+.field input,
+.field select,
+.field textarea{
+  font-size:1.12rem;           /* larger, easier for older eyes */
+  color:var(--ink-strong);
+  padding:1rem 1.1rem;
+  border:2px solid #b9d5ea;    /* clearer edge */
+  border-radius:12px;
+  background:#ffffff;          /* clean white, not pale blue */
+}
+ 
+/* Placeholder text — visible but clearly secondary */
+.field input::placeholder,
+.field textarea::placeholder{
+  color:var(--placeholder);
+  opacity:1;                   /* iOS dims placeholders; force full */
+}
+ 
+/* The dropdown — make it obviously tappable and readable */
+.field select{
+  appearance:none;
+  -webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23a5822f' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 1.1rem center;
+  padding-right:2.8rem;
+  cursor:pointer;
+}
+/* placeholder option ("Choose one…") looks muted; real choices look solid */
+.field select:invalid,
+.field select option[disabled]{ color:var(--placeholder); }
+.field select option{ color:var(--ink-strong); }
+ 
+/* Focus — warm gold glow so people see exactly where they are */
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 0 4px rgba(201,162,75,.22);
+}
+ 
+/* Disabled attendee box (when declining) — still readable, not a faint ghost */
+.field input:disabled{
+  opacity:1;
+  color:#9fb3c4;
+  background:#f2f6fa;
+  border-color:#d5e4f0;
+}
+ 
+/* SUBMIT BUTTON — larger, warmer, unmistakably the next step */
+.rsvp__form .btn--gold{
+  font-size:.95rem;
+  letter-spacing:.14em;
+  padding:1.15em 2.4em;
+  background:linear-gradient(135deg,#e6cf95,#c9a24b 60%,#b8902f);
+  color:#3d2f0c;
+  box-shadow:0 16px 34px -12px rgba(165,130,47,.8);
+}
+.rsvp__form .btn--gold:hover{ filter:brightness(1.04); }
+ 
+/* Little helper line under fields, for warmth + guidance (see HTML note) */
+.field__hint{
+  margin:.45rem 0 0;
+  font-size:.9rem;
+  color:#6d8298;
+}
+ 
+/* Slightly more breathing room between fields */
+.field{ margin-bottom:1.6rem; }
+
+/* HERO — CONTRAST POLISH */
+.hero__eyebrow{
+  color:#f4e2b0;
+  opacity:1;
+  letter-spacing:.3em;
+  text-shadow:0 1px 8px rgba(40,60,80,.35);
+}
+.hero__meta{
+  color:#ffffff;
+  text-shadow:0 1px 10px rgba(40,60,80,.30);
+}
+.countdown__label{
+  color:#f4e2b0;
+  opacity:1;
+}
+.hero{
+  background:
+    radial-gradient(120% 90% at 50% -10%, rgba(255,255,255,.30), transparent 55%),
+    linear-gradient(180deg,#9cbfdd 0%, #7ba6cf 45%, #5c86b0 100%);
+}
