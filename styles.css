@@ -932,3 +932,14 @@ Rsvp upgrade · CSS
   .hero{ animation:none !important; background-size:cover !important; }
 }
  
+/* HERO PHOTO — DESKTOP FRAMING FIX */
+@media (min-width: 700px){
+  .hero{ background-position:center 42%; }
+}
+@media (min-width: 1100px){
+  .hero{ background-position:center 48%; }
+  @keyframes heroZoom{
+    0%   { background-size:cover; }
+    100% { background-size:106%; }
+  }
+}
