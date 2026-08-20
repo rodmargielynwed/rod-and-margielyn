@@ -789,3 +789,97 @@ Rsvp upgrade · CSS
   .hero__water::before,.hero__water::after{ animation:none !important; display:none; }
 }
  
+/* =========================================================
+   HERO — STRONGER CONTRAST + DRAMATIC ENTRANCE
+   Paste at the VERY END of styles.css (after everything else).
+   This overrides earlier, too-subtle versions.
+   ========================================================= */
+ 
+/* ---- EYEBROW: make it genuinely readable ----
+   Pale gold on pale blue never reads. We use a deeper, richer gold,
+   heavier weight, and a soft dark halo so it sits crisply on the sky. */
+.hero__eyebrow{
+  color:#f0d27a !important;                 /* richer, deeper gold */
+  font-weight:600 !important;
+  font-size:.8rem !important;
+  letter-spacing:.34em !important;
+  text-shadow:
+    0 1px 2px rgba(30,50,70,.55),
+    0 2px 12px rgba(30,50,70,.35) !important;   /* dark halo = pops on light blue */
+}
+/* a slim gold rule under it adds structure + reads as "premium invitation" */
+.hero__eyebrow::after{
+  content:"";
+  display:block;
+  width:56px; height:2px;
+  margin:.9rem auto 0;
+  background:linear-gradient(90deg, transparent, #e6cf95, transparent);
+  opacity:.9;
+}
+ 
+/* ---- DRAMATIC ENTRANCE ----
+   Bigger rise, a hair of scale, longer travel, more theatrical stagger.
+   Overrides the gentler version pasted earlier. */
+.hero__eyebrow,
+.hero__names,
+.hero__tag,
+.hero__meta,
+.countdown,
+.hero .btn--gold{
+  opacity:0;
+  transform:translateY(48px) scale(.985);
+  animation:heroRiseBig 1.25s cubic-bezier(.16,.84,.24,1) forwards;
+}
+.hero__eyebrow { animation-delay:.20s; }
+.hero__names   { animation-delay:.55s; }
+.hero__tag     { animation-delay:1.15s; }
+.hero__meta    { animation-delay:1.45s; }
+.countdown     { animation-delay:1.75s; }
+.hero .btn--gold{ animation-delay:2.05s; }
+ 
+@keyframes heroRiseBig{
+  0%   { opacity:0; transform:translateY(48px) scale(.985); filter:blur(4px); }
+  60%  { filter:blur(0); }
+  100% { opacity:1; transform:translateY(0) scale(1); filter:blur(0); }
+}
+ 
+/* Names: bigger scale-in from soft blur, then keep the breathing glow */
+.hero__names{
+  animation:nameEntrance 1.5s cubic-bezier(.16,.84,.24,1) .55s forwards,
+            nameGlow 5s ease-in-out 2.4s infinite;
+  transform-origin:center;
+}
+@keyframes nameEntrance{
+  0%   { opacity:0; transform:translateY(54px) scale(.92); filter:blur(8px); letter-spacing:.04em; }
+  55%  { filter:blur(0); }
+  100% { opacity:1; transform:translateY(0) scale(1); filter:blur(0); letter-spacing:normal; }
+}
+@keyframes nameGlow{
+  0%,100%{ text-shadow:0 6px 30px rgba(51,71,90,.35); }
+  50%    { text-shadow:0 4px 46px rgba(255,255,255,.55), 0 6px 30px rgba(51,71,90,.35); }
+}
+ 
+/* A soft radial "spotlight" blooms behind the names as they land */
+.hero__inner{ position:relative; }
+.hero__inner::before{
+  content:"";
+  position:absolute; top:32%; left:50%;
+  width:120%; height:46%;
+  transform:translate(-50%,-50%) scale(.6);
+  background:radial-gradient(closest-side, rgba(255,255,255,.28), transparent 70%);
+  opacity:0;
+  animation:spotlight 2s ease-out .6s forwards;
+  pointer-events:none; z-index:-1;
+}
+@keyframes spotlight{
+  0%   { opacity:0; transform:translate(-50%,-50%) scale(.6); }
+  100% { opacity:1; transform:translate(-50%,-50%) scale(1); }
+}
+ 
+/* Reduced-motion safety */
+@media (prefers-reduced-motion: reduce){
+  .hero__eyebrow,.hero__names,.hero__tag,.hero__meta,.countdown,.hero .btn--gold{
+    opacity:1 !important; transform:none !important; filter:none !important; animation:none !important;
+  }
+  .hero__inner::before{ display:none; }
+}
