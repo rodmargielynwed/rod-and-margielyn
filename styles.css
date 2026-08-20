@@ -883,3 +883,52 @@ Rsvp upgrade · CSS
   }
   .hero__inner::before{ display:none; }
 }
+/* =========================================================
+   HERO — PHOTO BACKGROUND (rm3.jpg)
+   Paste at the VERY END of styles.css (after all other blocks).
+   Puts your waterfall photo behind the hero with a soft blue
+   overlay so the white script + gold text stay perfectly readable.
+   ========================================================= */
+ 
+.hero{
+  /* layered: readable gradient ON TOP, your photo BEHIND */
+  background:
+    linear-gradient(180deg,
+      rgba(74,123,166,.55) 0%,      /* airy at top so eyebrow reads */
+      rgba(74,123,166,.42) 38%,     /* clearest over the names */
+      rgba(60,90,120,.62) 72%,
+      rgba(44,62,79,.80) 100%),     /* darker at base so button pops */
+    url("rm3.jpg");
+  background-size:cover;
+  background-position:center 30%;   /* keep the waterfall + couple in frame */
+  background-repeat:no-repeat;
+}
+ 
+/* Gentle slow zoom on the photo = cinematic life (Ken Burns effect) */
+.hero{ animation:heroZoom 22s ease-in-out infinite alternate; }
+@keyframes heroZoom{
+  0%   { background-size:cover; }
+  100% { background-size:112%; }
+}
+ 
+/* Countdown cards: a touch more frost so they read over the photo */
+.countdown__unit{
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.4);
+  backdrop-filter:blur(10px);
+  box-shadow:0 12px 34px -14px rgba(20,35,50,.6), inset 0 1px 0 rgba(255,255,255,.4);
+}
+ 
+/* Slightly deepen text shadows so every word stays crisp on the image */
+.hero__names{ text-shadow:0 6px 34px rgba(20,35,50,.55) !important; }
+.hero__tag,
+.hero__meta{ text-shadow:0 2px 14px rgba(20,35,50,.55) !important; }
+.hero__eyebrow{
+  text-shadow:0 1px 3px rgba(20,35,50,.7), 0 2px 14px rgba(20,35,50,.5) !important;
+}
+ 
+/* Reduced-motion: hold the photo still */
+@media (prefers-reduced-motion: reduce){
+  .hero{ animation:none !important; background-size:cover !important; }
+}
+ 
