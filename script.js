@@ -247,3 +247,24 @@
     img.onload = function () { slot.replaceWith(img); };
   })();
 })();
+/* ===== Wedding music toggle ===== */
+(function(){
+  var btn = document.getElementById("musicBtn");
+  var audio = document.getElementById("weddingAudio");
+  if(!btn || !audio) return;
+
+  audio.volume = 0.55; // gentle, not blaring
+
+  btn.addEventListener("click", function(){
+    if(audio.paused){
+      audio.play().then(function(){
+        btn.classList.add("is-playing");
+        btn.setAttribute("aria-label","Pause wedding music");
+      }).catch(function(err){ console.error("Play blocked:", err); });
+    } else {
+      audio.pause();
+      btn.classList.remove("is-playing");
+      btn.setAttribute("aria-label","Play wedding music");
+    }
+  });
+})();
