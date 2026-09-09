@@ -322,8 +322,9 @@ h3 { font-size: 1.4rem; color: var(--blue-600); }
 .timeline__body h3 { font-size: 1.2rem; margin-bottom: .2rem; }
 .timeline__body p { margin: 0; font-size: .95rem; }
 @media (max-width: 480px) {
-  .timeline::before { left: 66px; }
-  .timeline__item { grid-template-columns: 66px 1fr; gap: 1rem; }
+  .timeline::before { left: 82px; }
+  .timeline__item { grid-template-columns: 82px 1fr; gap: 1rem; }
+  .timeline__time { font-size: .92rem; }
 }
 
 /* =========================================================
