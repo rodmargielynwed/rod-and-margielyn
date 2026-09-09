@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rod &amp; Margielyn · November 14, 2026</title>
+  <meta name="description" content="Rod and Margielyn are getting married at Lisland Rainforest Resort, Urdaneta City — November 14, 2026. RSVP here." />
+
+  <!-- Fonts: Cormorant Garamond (display), Pinyon Script (couple's names), Jost (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2QJZC7J0R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q2QJZC7J0R');
+  </script>
+
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand">R &amp; M</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#story">Our Day</a>
+      <a href="#details">Details</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#entourage">Entourage</a>
+      <a href="#rsvp" class="nav__cta">RSVP</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <!-- animated "water" layers form the signature backdrop -->
+    <div class="hero__water" aria-hidden="true">
+      <span class="wave wave--1"></span>
+      <span class="wave wave--2"></span>
+      <span class="wave wave--3"></span>
+      <span class="shimmer"></span>
+    </div>
+
+    <div class="hero__inner">
+      <p class="hero__eyebrow reveal">Together with their families</p>
+      <h1 class="hero__names reveal">
+        <span>Rod</span>
+        <span class="hero__amp">&amp;</span>
+        <span>Margielyn</span>
+      </h1>
+      <p class="hero__tag reveal">are getting married</p>
+
+      <div class="hero__meta reveal">
+        <span>Saturday</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>November 14, 2026</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>Urdaneta City</span>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown reveal" id="countdown" aria-live="polite">
+        <div class="countdown__unit"><span class="countdown__num" data-unit="days">--</span><span class="countdown__label">Days</span></div>
+        <div class="countdown__unit"><span class="countdown__num" data-unit="hours">--</span><span class="countdown__label">Hours</span></div>
+        <div class="countdown__unit"><span class="countdown__num" data-unit="minutes">--</span><span class="countdown__label">Minutes</span></div>
+        <div class="countdown__unit"><span class="countdown__num" data-unit="seconds">--</span><span class="countdown__label">Seconds</span></div>
+      </div>
+
+      <a href="#rsvp" class="btn btn--gold reveal">Reserve your seat</a>
+    </div>
+
+    <a href="#story" class="hero__scroll" aria-label="Scroll to content"><span></span></a>
+  </section>
+
+  <!-- ============ STORY / INTRO ============ -->
+  <section class="section story" id="story">
+    <div class="container container--narrow center">
+      <p class="eyebrow reveal">A resort celebration</p>
+      <h2 class="reveal">Come celebrate with us<br />under the rainforest sky</h2>
+      <p class="lead reveal">
+        After all the years, all the ordinary days made extraordinary by each other,
+        Rod and Margielyn are saying "I do." Join us for a morning of vows, an afternoon of
+        laughter and togetherness, and a lifetime of gratitude that you were there.
+      </p>
+      <figure class="story__photo reveal">
+        <img src="rm2.jpg" alt="Rod and Margielyn" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ DETAILS ============ -->
+  <section class="section details" id="details">
+    <div class="container">
+      <div class="center">
+        <p class="eyebrow reveal">The details</p>
+        <h2 class="reveal">Where &amp; when</h2>
+      </div>
+
+      <div class="details__grid">
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">&#9962;</span>
+          <h3>The Ceremony &amp; Reception</h3>
+          <p class="card__place">Urduja Pavilion</p>
+          <p>Lisland Rainforest Resort<br />
+             KM 182 McArthur Highway, Brgy. San Vicente<br />
+             Urdaneta City, Pangasinan 2428</p>
+          <p class="card__time">Ceremony 10:00 AM &middot; Reception to follow</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">&#9752;</span>
+          <h3>Dress Code</h3>
+          <p class="card__place">Semi-Formal / Smart Formal</p>
+          <p>We would be honoured to see you in our palette —
+             shades of <strong>baby blue</strong>, soft whites, and warm neutrals.</p>
+          <p class="card__note">Kindly reserve pure white for the bride.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">&#9971;</span>
+          <h3>Getting There</h3>
+          <p>Along MacArthur Highway, 150m from the Dagupan junction.
+             About 4 hours from Manila via TPLEX/NLEX, 3 hours from Nueva Vizcaya,
+             and 2 hours from Baguio City.</p>
+        </article>
+      </div>
+
+      <!-- Map -->
+      <div class="map reveal">
+        <iframe
+          title="Map to Lisland Rainforest Resort"
+          src="https://www.google.com/maps?q=Lisland%20Rainforest%20Resort%2C%20McArthur%20Highway%2C%20San%20Vicente%2C%20Urdaneta%20City%2C%20Pangasinan&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+      <p class="center map__link reveal">
+        <a href="https://www.google.com/maps/search/?api=1&query=Lisland+Rainforest+Resort+Urdaneta+City" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ SCHEDULE ============ -->
+  <section class="section schedule" id="schedule">
+    <div class="container container--narrow">
+      <div class="center">
+        <p class="eyebrow reveal">November 14, 2026</p>
+        <h2 class="reveal">The day, hour by hour</h2>
+        <p class="schedule__note reveal">A preliminary program — the 10:00 AM ceremony is fixed, and the times that follow are a gentle guide.</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <span class="timeline__time">9:30 AM</span>
+          <div class="timeline__body">
+            <h3>Guests Arrival</h3>
+            <p>Find your seat in the garden.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__time">10:00 AM</span>
+          <div class="timeline__body">
+            <h3>The Ceremony</h3>
+            <p>Rod &amp; Margielyn exchange their vows.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__time">11:00 AM</span>
+          <div class="timeline__body">
+            <h3>Cocktails &amp; Photos</h3>
+            <p>Photos with the newlyweds, family, and friends — everyone's welcome to join!</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__time">12:00 NN</span>
+          <div class="timeline__body">
+            <h3>Reception Luncheon</h3>
+            <p>Toasts, a shared feast, and celebration with family and friends.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__time">2:00 PM</span>
+          <div class="timeline__body">
+            <h3>Celebration Continues</h3>
+            <p>Laughter, bonding, and an afternoon of celebration with family and friends.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ ENTOURAGE ============ -->
+  <section class="section entourage" id="entourage">
+    <div class="container container--narrow">
+      <div class="center">
+        <p class="eyebrow reveal">Together with our families</p>
+        <h2 class="reveal">The Entourage</h2>
+        <p class="lead reveal">Rod &amp; Margielyn request the honor of your presence
+          as we exchange our vows, surrounded by the people we love.</p>
+      </div>
+
+      <!-- Parents -->
+      <div class="ent-grid reveal">
+        <div class="ent-col">
+          <h3 class="ent-role">Parents of the Groom</h3>
+          <p>Romeo Bugnay</p>
+          <p>Doncing Bugnay</p>
+        </div>
+        <div class="ent-col">
+          <h3 class="ent-role">Parents of the Bride</h3>
+          <p>Eduardo Caoile</p>
+          <p>Evelyn Caoile</p>
+        </div>
+      </div>
+
+      <!-- Officiant -->
+      <div class="ent-single reveal">
+        <h3 class="ent-role">Officiating Pastor</h3>
+        <p>John Samonte</p>
+      </div>
+
+      <!-- Principal Sponsors -->
+      <div class="ent-block reveal">
+        <h3 class="ent-role center">Principal Sponsors</h3>
+        <div class="ent-pairs">
+          <div class="ent-pair"><span>Agustin Lunag</span><span>Ruth Lunag</span></div>
+          <div class="ent-pair"><span>Giovannie Navalta</span><span>Jane Navalta</span></div>
+          <div class="ent-pair"><span>Eladio Avellanoza</span><span>Melody Avellanoza</span></div>
+          <div class="ent-pair"><span>John Samonte</span><span>Stella Samonte</span></div>
+          <div class="ent-pair"><span>Edison De Guzman</span><span>Laila Al-nuiami</span></div>
+          <div class="ent-pair"><span>Remedios Tercias</span><span></span></div>
+        </div>
+      </div>
+
+      <!-- Honor attendants -->
+      <div class="ent-grid reveal">
+        <div class="ent-col">
+          <h3 class="ent-role">Maid of Honor</h3>
+          <p>Eddielyn Caoile</p>
+        </div>
+        <div class="ent-col">
+          <h3 class="ent-role">Best Man</h3>
+          <p>Rodonio Bugnay</p>
+        </div>
+      </div>
+
+      <!-- Secondary Sponsors -->
+      <div class="ent-block reveal">
+        <h3 class="ent-role center">Secondary Sponsors</h3>
+        <div class="ent-sub">
+          <h4 class="ent-subrole">Candle</h4>
+          <div class="ent-pair"><span>Hazan Daniel</span><span>Glaiane Mhay Bugnay</span></div>
+        </div>
+        <div class="ent-sub">
+          <h4 class="ent-subrole">Veil</h4>
+          <div class="ent-pair"><span>Sethlee Daniel</span><span>Germilyne Bugnay</span></div>
+        </div>
+        <div class="ent-sub">
+          <h4 class="ent-subrole">Cord</h4>
+          <div class="ent-pair"><span>Darwin Bugnay</span><span>Noreliza Bugnay</span></div>
+        </div>
+      </div>
+
+      <!-- Veil & Cord removal -->
+      <div class="ent-grid reveal">
+        <div class="ent-col">
+          <h3 class="ent-role">Veil Removal</h3>
+          <p>Sherwin Castaneda</p>
+          <p>Mirah Glyre Bugnay</p>
+        </div>
+        <div class="ent-col">
+          <h3 class="ent-role">Cord Removal</h3>
+          <p>Gerlan Josh Viniegas</p>
+          <p>Micah Grace Bugnay</p>
+        </div>
+      </div>
+
+      <!-- Bearers -->
+      <div class="ent-block reveal">
+        <h3 class="ent-role center">Bearers</h3>
+        <div class="ent-sub">
+          <h4 class="ent-subrole">Ring</h4>
+          <p>Ramghie Hidalgo</p>
+        </div>
+        <div class="ent-sub">
+          <h4 class="ent-subrole">Bible</h4>
+          <p>Mayer Kent Bugnay</p>
+        </div>
+        <div class="ent-sub">
+          <h4 class="ent-subrole">Coin</h4>
+          <p>Deandre Bauzon</p>
+        </div>
+      </div>
+
+      <!-- Flower Girls -->
+      <div class="ent-single reveal">
+        <h3 class="ent-role">Flower Girls</h3>
+        <p>Zione Reese Bugnay</p>
+        <p>Mathea Charis Bugnay</p>
+        <p>Samaira Hidalgo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section class="section rsvp" id="rsvp">
+    <div class="container container--narrow">
+      <div class="center">
+        <p class="eyebrow reveal">Kindly respond</p>
+        <h2 class="reveal">RSVP</h2>
+        <p class="lead reveal">Please let us know by <strong>October 14, 2026</strong>
+           so we can save your seat.</p>
+      </div>
+
+      <form class="rsvp__form reveal" id="rsvpForm" novalidate>
+        <div class="field">
+          <label for="guestName">Guest name(s) <span aria-hidden="true">*</span></label>
+          <input type="text" id="guestName" name="guestName" autocomplete="name"
+                 placeholder="e.g. Juan &amp; Maria Dela Cruz" required />
+          <p class="field__error" data-error-for="guestName"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address <span class="field__opt">(optional)</span></label>
+          <input type="email" id="email" name="email" autocomplete="email"
+                 placeholder="you@example.com" />
+          <p class="field__error" data-error-for="email"></p>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="attendance">Will you attend? <span aria-hidden="true">*</span></label>
+            <select id="attendance" name="attendance" required>
+              <option value="" disabled selected>Choose one…</option>
+              <option value="Joyfully Accepts">Joyfully accepts</option>
+              <option value="Regretfully Declines">Regretfully declines</option>
+            </select>
+            <p class="field__error" data-error-for="attendance"></p>
+          </div>
+
+          <div class="field" id="guestsField">
+            <label for="attendees">Number of attendees <span aria-hidden="true">*</span></label>
+          <input type="number" id="attendees" name="attendees" min="1" max="10"
+                 step="1" inputmode="numeric" value="1" />
+            <p class="field__error" data-error-for="attendees"></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Dietary restrictions or a note for the couple</label>
+          <textarea id="notes" name="notes" rows="4"
+                    placeholder="Allergies, song requests, or a message of love…"></textarea>
+        </div>
+
+        <!-- honeypot: hidden from humans, catches bots -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+               class="hp" aria-hidden="true" />
+
+        <button type="submit" class="btn btn--gold btn--block" id="submitBtn">
+          Send our RSVP
+        </button>
+
+        <p class="rsvp__status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <p class="footer__names">Rod <span>&amp;</span> Margielyn</p>
+    <p class="footer__date">14 &middot; 11 &middot; 2026 — Lisland Rainforest Resort, Urdaneta City</p>
+    <p class="footer__gift">Your presence is the only gift we hope for.</p>
+    <p class="footer__love">Made with love, and a little bit of blue.</p>
+  </footer>
+
+  <!-- Floating music player -->
+  <button id="musicBtn" class="music-btn" aria-label="Play wedding music" title="Play music">
+    <span class="music-btn__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18V5l12-2v13"></path>
+        <circle cx="6" cy="18" r="3"></circle>
+        <circle cx="18" cy="16" r="3"></circle>
+      </svg>
+    </span>
+    <span class="music-btn__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  </button>
+  <audio id="weddingAudio" loop preload="none">
+    <source src="song.mp4" type="audio/mp4">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
