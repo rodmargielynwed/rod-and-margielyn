@@ -1037,3 +1037,14 @@ Rsvp upgrade · CSS
   .ent-pair{ column-gap:1rem; }
   .ent-pair span{ font-size:.95rem; }
 }
+/* Nav monogram logo */
+.nav__logo{
+  height:46px; width:auto; display:block;
+  filter:drop-shadow(0 2px 6px rgba(20,35,50,.4));
+  transition:height .4s var(--ease), filter .4s var(--ease);
+}
+.nav.is-stuck .nav__logo{
+  height:38px;
+  /* when the nav turns white on scroll, tint the white logo to navy so it stays visible */
+  filter:brightness(0) saturate(100%) invert(28%) sepia(18%) saturate(1400%) hue-rotate(175deg) brightness(92%) contrast(88%);
+}
