@@ -193,6 +193,7 @@ h3 { font-size: 1.4rem; color: var(--blue-600); }
 /* Countdown */
 .countdown {
   display: flex; justify-content: center; gap: clamp(.6rem, 3vw, 1.8rem);
+  margin-top: 3rem;
   margin-bottom: 2.6rem;
 }
 .countdown__unit {
