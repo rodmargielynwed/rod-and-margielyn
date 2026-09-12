@@ -301,13 +301,15 @@ h3 { font-size: 1.4rem; color: var(--blue-600); }
 .schedule h2 { margin-bottom: 3rem; }
 .timeline { list-style: none; margin: 0 auto; padding: 0 0 0 .5rem; max-width: 560px; position: relative; }
 .timeline::before {
-  content: ""; position: absolute; left: 100px; top: 6px; bottom: 6px;
+  content: ""; position: absolute; left: 120px; top: 6px; bottom: 6px;
   width: 2px; background: linear-gradient(var(--gold-soft), var(--blue-200));
 }
+
 .timeline__item {
-  display: grid; grid-template-columns: 100px 1fr; gap: 1.4rem;
+  display: grid; grid-template-columns: 120px 1fr; gap: 1.4rem;
   padding-bottom: 2.2rem; position: relative;
 }
+
 .timeline__time {
   text-align: right; font-family: var(--font-display); font-weight: 600;
   font-size: 1rem; color: var(--gold-deep); padding-top: .1rem;
@@ -323,10 +325,11 @@ h3 { font-size: 1.4rem; color: var(--blue-600); }
 .timeline__body h3 { font-size: 1.2rem; margin-bottom: .2rem; }
 .timeline__body p { margin: 0; font-size: .95rem; }
 @media (max-width: 480px) {
-  .timeline::before { left: 92px; }
-  .timeline__item { grid-template-columns: 92px 1fr; gap: 1rem; }
-  .timeline__time { font-size: .85rem; padding-right: .5rem; }
+  .timeline::before { left: 116px; }
+  .timeline__item { grid-template-columns: 116px 1fr; gap: 1rem; }
+  .timeline__time { font-size: .85rem; padding-right: .7rem; }
 }
+
 
 /* =========================================================
    RSVP
