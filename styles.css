@@ -313,8 +313,9 @@ h3 { font-size: 1.4rem; color: var(--blue-600); }
 .timeline__time {
   text-align: right; font-family: var(--font-display); font-weight: 600;
   font-size: 1rem; color: var(--gold-deep); padding-top: .1rem;
-  padding-right: .6rem; white-space: nowrap;
+  padding-right: 1rem; white-space: nowrap;
 }
+
 .timeline__body { position: relative; }
 .timeline__body::before {
   content: ""; position: absolute; left: -1.4rem; top: .45rem;
@@ -327,8 +328,8 @@ h3 { font-size: 1.4rem; color: var(--blue-600); }
 @media (max-width: 480px) {
   .timeline::before { left: 116px; }
   .timeline__item { grid-template-columns: 116px 1fr; gap: 1rem; }
-  .timeline__time { font-size: .85rem; padding-right: .7rem; }
-}
+ .timeline__time { font-size: .8rem; padding-right: 1rem; }
+
 
 
 /* =========================================================
