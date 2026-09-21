@@ -328,7 +328,8 @@ h3 { font-size: 1.4rem; color: var(--blue-600); }
 @media (max-width: 480px) {
   .timeline::before { left: 116px; }
   .timeline__item { grid-template-columns: 116px 1fr; gap: 1rem; }
- .timeline__time { font-size: .8rem; padding-right: 1rem; }
+  .timeline__time { font-size: .8rem; padding-right: 1rem; }
+}
 
 
 
