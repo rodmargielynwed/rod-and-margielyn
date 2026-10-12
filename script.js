@@ -172,6 +172,7 @@
       attendance: form.attendance.value,
       attendees: form.attendance.value === "Joyfully Accepts" ? form.attendees.value : "0",
       notes: form.notes.value.trim(),
+      side: form.side ? form.side.value : "",
       submittedAt: new Date().toISOString()
     };
 
