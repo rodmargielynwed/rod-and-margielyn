@@ -193,13 +193,40 @@
     submitBtn.textContent = on ? "Sending\u2026" : "Send our RSVP";
   }
 
-  function showSuccess() {
+    function showSuccess() {
     var coming = attendanceSel.value !== "Regretfully Declines";
+    var RSVP_DEADLINE = new Date("2026-10-30T23:59:59+08:00").getTime();
+    var isLate = Date.now() > RSVP_DEADLINE;
+
+    if (coming && isLate) {
+      statusEl.textContent = "Your RSVP has been recorded. Please contact Rod or Margielyn to confirm your seat.";
+      statusEl.className = "rsvp__status is-ok";
+      showLatePopup();
+      return;
+    }
+
     statusEl.textContent = coming
       ? "Thank you \u2014 your seat is saved. We can't wait to celebrate with you! \u2665"
       : "Thank you for letting us know. You'll be missed \u2014 sending love. \u2665";
     statusEl.className = "rsvp__status is-ok";
   }
+
+  function showLatePopup() {
+    var wrap = document.createElement("div");
+    wrap.style.cssText = "position:fixed;inset:0;z-index:100;background:rgba(30,45,60,.55);display:flex;align-items:center;justify-content:center;padding:1.2rem;";
+    wrap.innerHTML =
+      '<div style="background:#fff;max-width:380px;width:100%;border-radius:14px;border-top:5px solid #c9a24b;padding:2rem 1.6rem;text-align:center;box-shadow:0 24px 60px -20px rgba(0,0,0,.5);">' +
+        '<p style="font-family:\'Cormorant Garamond\',Georgia,serif;font-size:1.6rem;color:#4a7ba6;margin:0 0 .8rem;">Thank you!</p>' +
+        '<p style="font-size:1.08rem;color:#2b3d4d;line-height:1.6;margin:0 0 1rem;">Your RSVP has been recorded.</p>' +
+        '<p style="font-size:1.08rem;color:#2b3d4d;line-height:1.6;margin:0 0 1.6rem;">However, our RSVP deadline was <strong>October 30, 2026</strong>. Kindly contact the groom or the bride to confirm your seat.</p>' +
+        '<button type="button" style="font-family:Jost,Arial,sans-serif;font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;border:none;border-radius:100px;padding:1em 2.4em;background:linear-gradient(135deg,#e6cf95,#c9a24b);color:#3d2f0c;cursor:pointer;">OK</button>' +
+      '</div>';
+    document.body.appendChild(wrap);
+    function close() { wrap.remove(); }
+    wrap.querySelector("button").addEventListener("click", close);
+    wrap.addEventListener("click", function (e) { if (e.target === wrap) close(); });
+  }
+
 
   /* ---- backend dispatch ---- */
   function submitRSVP(data) {
