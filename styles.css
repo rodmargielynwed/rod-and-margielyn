@@ -775,3 +775,28 @@ h3 { font-size: 1.4rem; color: var(--blue-600); }
 @media (prefers-reduced-motion: reduce){
   .rsvp-closed{ opacity:1; transform:none; animation:none; }
 }
+/* Thank-you note under RSVP deadline */
+.thanks-note{
+  margin:2rem auto 0;
+  max-width:560px;
+  padding:1.6rem 1.4rem;
+  background:#ffffff;
+  border:2px solid #e6cf95;
+  border-radius:16px;
+  color:#2b3d4d;
+  font-size:1.08rem;
+  line-height:1.7;
+}
+.thanks-note__title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;
+  font-weight:600;
+  color:#a5822f;
+  margin:0 0 .8rem;
+}
+.thanks-note__sign{
+  font-family:'Pinyon Script',cursive;
+  font-size:1.6rem;
+  color:#2f5f86;
+  margin:1rem 0 0;
+}
